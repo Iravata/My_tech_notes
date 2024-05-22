@@ -33,6 +33,7 @@
 ![github_workflow](assets/006/flow_of_CICD.png)
 
 ---
+
 ## 🙋 How to run tests on a CI mode in docker explain?
 
 ### Explanation of `docker run -e CI=true`
