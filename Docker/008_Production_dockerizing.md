@@ -14,6 +14,7 @@
   - [External Nginx Service](#external-nginx-service)
   - [Server Service and Workers Service](#server-service-and-workers-service)
 - [🙋 Why are there 2 Nginx Services in the production version of the setup?](#-why-are-there-2-nginx-services-in-the-production-version-of-the-setup)
+- [🙋 What are the difference between Routing and Serving Nginx configurations.](#-what-are-the-difference-between-routing-and-serving-nginx-configurations)
 - [🙋 Discuss how the Routing and serving Nginx configurations are different?](#-discuss-how-the-routing-and-serving-nginx-configurations-are-different)
   - [Differences Between Routing and Serving Nginx Configurations](#differences-between-routing-and-serving-nginx-configurations)
   - [Example Routing Nginx Configuration:](#example-routing-nginx-configuration)
@@ -56,7 +57,6 @@
 - Allows for greater flexibility in customizing build processes and configurations for different environments.
 - Developers can modify Dockerfile.dev without affecting production settings, and vice versa.
 
----
 ## 🙋 Discuss the Differences in Dockerfile and Dockerfile.dev for each services in [Multicontainer_project](Docker/assets/008/complex-gh)?
 
 ### Client Service
@@ -88,7 +88,6 @@
 | **Command** | Specifies the command `npm run dev` to start the server using nodemon for development. | Specifies the command `npm run start` to start the server for production. |
 | **Summary** | The `Dockerfile.dev` for the `server and worker` service is used for development purposes. It sets up the environment, installs dependencies, and starts the server with nodemon for live reloading. | The `Dockerfile` for the `server and worker` service is used for production. It sets up the environment, installs dependencies, and starts the server. |
 
---- 
 ## 🙋 Why are there 2 Nginx Services in the production version of the setup?
 
 1. **Two Nginx Services**:
@@ -116,9 +115,9 @@
      - Reflects a more complex and realistic production setup.
      - Provides robustness by having dedicated services for specific tasks.
 
-  ---
 This documentation compares the differences between the Routing and Serving Nginx configurations. The Routing Nginx configuration is responsible for handling the routing of requests to the appropriate backend services, while the Serving Nginx configuration is responsible for serving the static files for the React application.
 
+## 🙋 What are the difference between Routing and Serving Nginx configurations.
 The key differences between the two configurations are:
 
 - **Purpose**: The Routing Nginx configuration handles routing of requests to the backend services, while the Serving Nginx configuration serves the static files for the React application.

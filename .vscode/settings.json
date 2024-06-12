@@ -1,4 +1,5 @@
 {
     "editor.language.brackets": [],
-    "editor.language.colorizedBracketPairs": []
+    "editor.language.colorizedBracketPairs": [],
+    "cody.autocomplete.advanced.provider": null
 }
